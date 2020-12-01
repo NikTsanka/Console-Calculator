@@ -4,24 +4,20 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    int addition(int x, int y) {
-        int result = x + y;
-        return result;
+    double addition(double x, double y) {
+        return x + y;
     }
 
-    int minus(int x, int y) {
-        int result = x - y;
-        return result;
+    double minus(double x, double y) {
+        return x - y;
     }
 
-    int division(int x, int y) {
-        int result = x / y;
-        return result;
+    double multiplication(double x, double y) {
+        return x * y;
     }
 
-    int multiplication(int x, int y) {
-        int result = x * y;
-        return result;
+    double division(double x, double y) {
+        return x / y;
     }
 
     void run() {
@@ -30,13 +26,13 @@ public class Calculator {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Welcome to console calculator");
             System.out.println("Please enter first number: ");
-            int firstNumber = scanner.nextInt();
+            double firstNumber = scanner.nextDouble();
             System.out.println("Please enter second number: ");
-            int secondNumber = scanner.nextInt();
+            double secondNumber = scanner.nextDouble();
             System.out.println("Please choose the operation: ");
             String symbol = scanner.next();
 
-            int result;
+            double result;
             switch (symbol) {
                 case "+":
                     result = addition(firstNumber, secondNumber);
@@ -60,7 +56,7 @@ public class Calculator {
             String wantToContinue = scanner.next();
             if (wantToContinue.equalsIgnoreCase("N")) {
                 enabled = false;
-            } else if (!wantToContinue.equals("Y")) {
+            } else if (!wantToContinue.equalsIgnoreCase("Y")) {
                 System.out.println("Wrong symbol entered. PROGRAM WILL EXIT");
                 System.exit(0);
             }
