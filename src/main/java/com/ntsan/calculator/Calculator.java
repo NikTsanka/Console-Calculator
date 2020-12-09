@@ -26,10 +26,14 @@ public class Calculator {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Welcome to console calculator");
             System.out.println("Please enter first number: ");
+
+
             double firstNumber = scanner.nextDouble();
             System.out.println("Please enter second number: ");
+
             double secondNumber = scanner.nextDouble();
             System.out.println("Please choose the operation: ");
+
             String symbol = scanner.next();
 
             double result;
