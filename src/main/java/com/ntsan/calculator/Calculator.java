@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    double addition(double x, double y) {
+    int addition(int x, int y) {
         return x + y;
     }
 
-    double minus(double x, double y) {
+    int substraction(int x, int y) {
         return x - y;
     }
 
-    double multiplication(double x, double y) {
+    int multiplication(int x, int y) {
         return x * y;
     }
 
-    double division(double x, double y) {
+    int division(int x, int y) {
         return x / y;
     }
 
@@ -28,22 +28,22 @@ public class Calculator {
             System.out.println("Please enter first number: ");
 
 
-            double firstNumber = scanner.nextDouble();
+            int firstNumber = scanner.nextInt();
             System.out.println("Please enter second number: ");
 
-            double secondNumber = scanner.nextDouble();
+            int secondNumber = scanner.nextInt();
             System.out.println("Please choose the operation: ");
 
             String symbol = scanner.next();
 
-            double result;
+            int result;
             switch (symbol) {
                 case "+":
                     result = addition(firstNumber, secondNumber);
                     System.out.println("The result is: " + result);
                     break;
                 case "-":
-                    result = minus(firstNumber, secondNumber);
+                    result = substraction(firstNumber, secondNumber);
                     System.out.println("The result is: " + result);
                     break;
                 case "/":
